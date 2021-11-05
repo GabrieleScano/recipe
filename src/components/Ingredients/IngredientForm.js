@@ -11,6 +11,13 @@ export const IngredientForm = React.memo(props => {
     event.preventDefault();
     props.onAddIngredient({ title: enteredTitle, amount: enteredAmount });
   };
+  const onTitleChangeHandler = event => {
+    setEnteredTitle(event.target.value)
+  }
+  
+  const onAmountChangeHandler = event => {
+    setEnteredAmount(event.target.value)
+  }
 
   return (
     <section className="ingredient-form">
@@ -22,9 +29,7 @@ export const IngredientForm = React.memo(props => {
               type="text"
               id="title"
               value={enteredTitle}
-              onChange={event => {
-                setEnteredTitle(event.target.value);
-              }}
+              onChange={onTitleChangeHandler}
             />
           </div>
           <div className="form-control">
@@ -33,9 +38,7 @@ export const IngredientForm = React.memo(props => {
               type="number"
               id="amount"
               value={enteredAmount}
-              onChange={event => {
-                setEnteredAmount(event.target.value);
-              }}
+              onChange={onAmountChangeHandler}
             />
           </div>
           <div className="ingredient-form__actions">
