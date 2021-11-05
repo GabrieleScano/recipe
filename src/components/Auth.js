@@ -1,9 +1,7 @@
-import React from 'react';
+import Card from './UI/Card'
+import './Auth.css'
 
-import Card from './UI/Card';
-import './Auth.css';
-
-const Auth = props => {
+const Auth = () => {
   const loginHandler = () => {};
 
   return (
@@ -14,7 +12,7 @@ const Auth = props => {
         <button onClick={loginHandler}>Log In</button>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default Auth;
+export default Auth

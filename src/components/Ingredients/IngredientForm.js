@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Card from '../UI/Card';
-import './IngredientForm.css';
+import {Card} from '../UI/Card'
+import './IngredientForm.css'
 
-const IngredientForm = React.memo(props => {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmount, setEnteredAmount] = useState('');
+export const IngredientForm = React.memo(props => {
+  const [enteredTitle, setEnteredTitle] = useState('')
+  const [enteredAmount, setEnteredAmount] = useState('')
 
   const submitHandler = event => {
     event.preventDefault();
@@ -44,7 +44,5 @@ const IngredientForm = React.memo(props => {
         </form>
       </Card>
     </section>
-  );
-});
-
-export default IngredientForm;
+  )
+})

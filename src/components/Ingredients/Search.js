@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Card from '../UI/Card';
-import './Search.css';
+import {Card} from '../UI/Card'
+import './Search.css'
 
 const Search = React.memo(props => {
   return (
@@ -13,7 +13,7 @@ const Search = React.memo(props => {
         </div>
       </Card>
     </section>
-  );
-});
+  )
+})
 
-export default Search;
+export default Search
