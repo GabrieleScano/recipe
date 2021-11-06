@@ -3,14 +3,18 @@ import React, { useState } from 'react'
 import {Card} from '../UI/Card'
 import './IngredientForm.css'
 
-export const IngredientForm = React.memo(props => {
+export const IngredientForm = React.memo(({onAddIngredient}) => {
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredAmount, setEnteredAmount] = useState('')
 
   const submitHandler = event => {
-    event.preventDefault();
-    props.onAddIngredient({ title: enteredTitle, amount: enteredAmount });
-  };
+    event.preventDefault()
+    onAddIngredient({ 
+      title: enteredTitle, 
+      amount: enteredAmount 
+    })
+  }
+
   const onTitleChangeHandler = event => {
     setEnteredTitle(event.target.value)
   }
