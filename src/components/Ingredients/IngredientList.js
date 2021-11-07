@@ -1,6 +1,4 @@
-import React from 'react';
-
-import './IngredientList.css';
+import './IngredientList.css'
 
 const IngredientList = props => {
   return (
@@ -15,7 +13,7 @@ const IngredientList = props => {
         ))}
       </ul>
     </section>
-  );
-};
+  )
+}
 
-export default IngredientList;
+export default IngredientList
